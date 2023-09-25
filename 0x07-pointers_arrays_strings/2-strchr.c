@@ -6,30 +6,18 @@
  *
  *@s: the first character
  *@c: the second one
- * Return: Always ptr
+ * Return: Always char
  */
 
 char *_strchr(char *s, char c)
 {
-	int j = 0, i = 0;
-	char *R;
-
-	R = s;
+	int j = 0;
 
 	while (s[j] != '\0')
 	{
 		if (s[j] == c)
-			break;
+			return (&s[j]);
 		j++;
 	}
-
-	while (s[j] != '\0')
-	{
-		R[i] = s[j];
-		j++;
-		i++;
-	}
-	R[i] = '\0';
-
-	return (R);
+	return (0);
 }
