@@ -14,7 +14,7 @@ int main(void)
 
 	printf("1");
 
-	for (a = 2; a < 100; a++)
+	for (a = 2; a <= 100; a++)
 	{
 		printf(" ");
 		if (a % 3 == 0)
