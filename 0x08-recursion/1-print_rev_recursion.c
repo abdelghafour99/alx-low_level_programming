@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * _print_puts_recursion - program 0
+ * _print_rev_recursion - program 0
  * prints a string in reverse
  * @s: the string to be printed
  */
 
-void _print_puts_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
 	if (*s)
 	{
