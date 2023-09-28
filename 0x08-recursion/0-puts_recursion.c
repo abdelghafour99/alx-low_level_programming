@@ -7,13 +7,13 @@
  * @s: the string to be printed
  */
 
-char _puts_recursion(char *s)
+void _puts_recursion(char *s)
 {
-	if (s == '\0')
+	if (s[0] == '\0')
 	{
-		printf('\n');
+		printf("\n");
 	}
-	putchar(s);
+	printf("%c", *s);
 	s++;
 
 	_puts_recursion(s);
