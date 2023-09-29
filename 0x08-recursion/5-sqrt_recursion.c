@@ -6,17 +6,18 @@
  * returnsthenatural square root of a number
  * sqrt - verify that n=m*m
  * @n: the number
- * @m: the second number
+ * @a: the first number
+ * @b: the second number
  * Return: the length of string
  */
 
-int sqrt_nm(int n, int m)
+int sqrt_ab(int a, int b)
 {
-	if (m == 1)
+	if (b == 1)
 		return (-1);
-	if (n == m * m)
-		return (m);
-	return (sqrt_nm(n, m - 1));
+	if (a == b * b)
+		return (b);
+	return (sqrt_ab(a, b - 1));
 }
 int _sqrt_recursion(int n)
 {
@@ -25,5 +26,5 @@ int _sqrt_recursion(int n)
 	if (n <= 0)
 		return (-1);
 
-	return (sqrt_nm(n, n - 1));
+	return (sqrt_ab(n, n - 1));
 }
