@@ -31,5 +31,5 @@ int _sqrt_recursion(int n)
 	if (n <= 0)
 		return (-1);
 
-	return (sqrt_ab(n, n - 1));
+	return (sqrt_ab(n, n / 2));
 }
