@@ -2,13 +2,10 @@
 #include <stdio.h>
 
 /**
- * _sqrt_recursion - program 4
- * returnsthenatural square root of a number
- * sqrt - verify that n=m*m
- * @n: the number
+ * sqrt_ab - verify that n=m*m
  * @a: the first number
  * @b: the second number
- * Return: the length of string
+ * Return: -1 or b
  */
 
 int sqrt_ab(int a, int b)
@@ -19,6 +16,14 @@ int sqrt_ab(int a, int b)
 		return (b);
 	return (sqrt_ab(a, b - 1));
 }
+
+/**
+ * _sqrt_recursion - program 4
+ * returns the natural square root of a number
+ * @n: the number
+ * Return: squar of number
+ */
+
 int _sqrt_recursion(int n)
 {
 	if (n == 1)
