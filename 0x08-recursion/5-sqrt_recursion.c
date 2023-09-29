@@ -10,13 +10,13 @@
  * Return: the length of string
  */
 
-int sqrt(int n, int m)
+int sqrt_nm(int n, int m)
 {
 	if (m == 1)
 		return (-1);
 	if (n == m * m)
 		return (m);
-	return (sqrt(n, m - 1));
+	return (sqrt_nm(n, m - 1));
 }
 int _sqrt_recursion(int n)
 {
@@ -25,5 +25,5 @@ int _sqrt_recursion(int n)
 	if (n <= 0)
 		return (-1);
 
-	return (sqrt(n, n - 1));
+	return (sqrt_nm(n, n - 1));
 }
