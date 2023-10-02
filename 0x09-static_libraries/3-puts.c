@@ -2,12 +2,16 @@
 #include <stdio.h>
 
 /**
- * _puts - program_5
+ * _puts - the length of a string
  *
- * @s: the number check
- * Return:1
+ * @str: the number check
  */
-void _puts(char *s)
+void _puts(char *str)
 {
+	while (*str != '\0')
+	{
+		putchar(*str++);
+	}
+	putchar('\n');
 
 }
