@@ -10,6 +10,4 @@
 void _puts(char *s)
 {
 
-	printf("ALX");
-
 }
