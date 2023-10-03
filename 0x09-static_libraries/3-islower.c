@@ -10,6 +10,6 @@
 int is_lower(int c)
 {
 
-	return (1);
+	return (c >= 'a' && c <= 'z');
 
 }

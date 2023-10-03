@@ -10,6 +10,6 @@
 int is_upper(int c)
 {
 
-	return (1);
+	return (c >= 'A' && c <= 'Z');
 
 }

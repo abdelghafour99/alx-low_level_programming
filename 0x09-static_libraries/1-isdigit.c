@@ -2,14 +2,12 @@
 #include <stdio.h>
 
 /**
- * is_lower - program_5
+ * _isdigit - program_5
  *
  * @c: the number check
  * Return:1
  */
-int is_digit(int c)
+int _isdigit(int c)
 {
-
-	return (1);
-
+	return (c >= '0' && c <= '9');
 }

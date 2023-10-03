@@ -7,7 +7,7 @@
  * @s: the first string
  *@b: the destination
  *@n: number of bytes to be changed
- * Return: Always ptr
+ * Return: Always s
  */
 
 char *_memset(char *s, char b, unsigned int n)
