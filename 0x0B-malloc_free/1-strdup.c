@@ -3,28 +3,35 @@
 #include <stdlib.h>
 
 /**
- * create_array - creates an array of chars
- * @c: the address of memory to print
- * @size: the size of the memory to print
+ * _strdup -  returns a pointer to a newly allocated space in memory
+ * @str: the string given
  *
  * Return: Null or str.
  */
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
 	char *s;
 	unsigned int i;
+	int len = 0;
 
-	if (size == 0)
+	if (str == NULL)
 		return (NULL);
 
-	s = malloc(sizeof(s) * size);
+	while (str[len] != '\0')
+		len++;
 
-	if (s == NULL)
+	len++;
+	s = (char *)malloc(sizeof(char) * lrn);
+
+	if (s != NULL)
+	{
+		for (i = 0; str[i] != '\0'; i++)
+			s[i] = str[i];
+	}
+	else
 		return (NULL);
 
-	for (i = 0; i < size; i++)
-		s[i] = c;
-
+	s[i] = '\0';
 	return (s);
 
 }
