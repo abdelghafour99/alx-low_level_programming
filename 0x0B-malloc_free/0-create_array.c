@@ -11,13 +11,15 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	if (size > 0)
+	if (size == 0)
+		return ("NuLL");
+
+	else
 	{
 		char *str;
 
 		str = malloc(sizeof(c));
 		return (str);
 	}
-	return ("NuLL");
 
 }
