@@ -8,11 +8,10 @@
  * @str : the String giving
  * Return: Null or p
  */
-char *strtow(char *str)
+char **strtow(char *str)
 {
 	int i = 0, w = 0, j = 0, count = 0, k, m, wordf;
-	char **p;
-	char *x;
+	char **p,*x;
 
 	if (*str == '\0' || str == NULL)
 		return (NULL);
