@@ -1,15 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * is_lower - program_1
+ * _islower - 1 or 0
  *
- * @c: the number check
- * Return:1
+ * @c: the one be checked
+ * Return: 1 if lowercase or 0 if not
  */
-int is_lower(int c)
+int _islower(int c)
 {
 
-	return (c >= 'a' && c <= 'z');
-
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

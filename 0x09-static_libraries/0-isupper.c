@@ -1,15 +1,17 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * is_upper - program_1
- *
- * @c: the number check
- * Return:1
+ * _isupper - checks for a digit
+ * @c : the caracter checks
+ * Return: 0 or 1
  */
-int is_upper(int c)
+int _isupper(int c)
 {
-
-	return (c >= 'A' && c <= 'Z');
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else
+		return (0);
 
 }
