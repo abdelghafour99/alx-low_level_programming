@@ -26,20 +26,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	str = malloc(sizeof(char) * (lena + lenb + 1));
 	if (str == NULL)
 		return (NULL);
-	str = s1;
-	if (n >= lenb)
-	{
-		while (i < n)
-		{
-			str[lena + i] = s2[i];
-			i++;
-		}
-	}
-	i = 0;
-	while (i < lenb)
-	{
+
+	for (i = 0; s1[i]; i++)
+		str[i] = s1[i];
+
+	for (i = 0; s2[i] && i < n; i++)
 		str[lena + i] = s2[i];
-		i++;
-	}
+
+	str[lena + i] = '\0';
 	return (str);
 }
