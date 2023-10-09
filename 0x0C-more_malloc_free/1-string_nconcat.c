@@ -22,6 +22,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		lena++;
 	while (s1[lenb] != '\0')
 		lenb++;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	str = malloc(sizeof(char) * (lena + lenb + 1));
 	if (str == NULL)
