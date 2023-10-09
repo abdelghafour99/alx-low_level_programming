@@ -16,7 +16,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	int lena = 0, lenb = 0, i = 0;
+	unsigned int lena = 0, lenb = 0, i = 0;
 
 	while (s1[lena] != '\0')
 		lena++;
