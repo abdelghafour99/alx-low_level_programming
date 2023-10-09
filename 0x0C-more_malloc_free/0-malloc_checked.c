@@ -15,7 +15,7 @@ void *malloc_checked(unsigned int b)
 {
 	char *str;
 
-	str = malloc(sizeof(int) * b);
+	str = malloc(sizeof(char) * b);
 	if (str == NULL)
 		return (char*)"98";
 	return (str);
