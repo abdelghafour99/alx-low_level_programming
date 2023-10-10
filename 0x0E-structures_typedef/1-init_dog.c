@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "dog.h"
 
-/*
+/**
  * init_dog - Initialize a dog structure
  *
- *@dog *d: the dog struct
+ *@d: the dog struct
  *@name: the name to attribut
  *@age: the age to attribut
  *@owner: the owner to attribut
