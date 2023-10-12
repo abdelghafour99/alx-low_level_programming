@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_numbers - prints numbers, followed by a new line
+ * print_strings - prints numbers, followed by a new line
  *
  * @separator: separator
  * @n: parametre
@@ -9,15 +9,15 @@
  **/
 
 void
-print_numbers(const char *separator, const unsigned int n, ...)
+print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
 	unsigned int i;
 
 	va_start(ap, n);
-	printf("%d", va_arg(ap, int));
+	printf("%s", va_arg(ap, const char*));
 	for (i = 1; i < n; i++)
-		printf("%s%d", separator, va_arg(ap, int));
+		printf("%s%s", separator, va_arg(ap, const char *));
 	va_end(ap);
 	printf("\n");
 }
