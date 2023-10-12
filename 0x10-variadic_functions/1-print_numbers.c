@@ -5,7 +5,7 @@
  *
  * @separator: separator
  * @n: parametre
- * Return: sum
+ *
  **/
 
 void
@@ -15,11 +15,11 @@ print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 
 	va_start(ap, n);
-	if (separator != NULL)
+	if (separator)
 	{
-	printf("%d", va_arg(ap, int));
-	for (i = 1; i < n; i++)
-		printf("%s%d", separator, va_arg(ap, int));
+		printf("%d", va_arg(ap, int));
+		for (i = 1; i < n; i++)
+			printf("%s%d", separator, va_arg(ap, int));
 	}
 	va_end(ap);
 	printf("\n");
