@@ -8,15 +8,15 @@
  * Return: size_t
  **/
 
-size_t listint_len(const listint_t *h)
+size_t list_len(const listint_t *h)
 {
 	size_t n = 0;
 
 	while (h)
 	{
-		nodes++;
+		n++;
 		h = h->next;
 	}
 
-	return (nodes);
+	return (n);
 }
