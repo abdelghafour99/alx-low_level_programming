@@ -1,23 +1,29 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * sum_them_all - returns the sum of all its parameters
+ * print_list - prints all the elements of a list
  *
- *
- * @n: parametre
- * Return: sum
+ * @h: list of element
+ * Return: size_t
  **/
 
-int
-sum_them_all(const unsigned int n, ...)
+size_t print_list(const list_t *h)
 {
-	va_list ap;
-	unsigned int i, sum;
+	size_t n = 0;
 
-	va_start(ap, n);
-	sum = 0;
-	for (i = 0; i < n; i++)
-		sum += va_arg(ap, int);
-	va_end(ap);
-	return (sum);
+	if (h == NULL)
+	{
+		printf("[0] (nil)");
+		return (n);
+	}
+
+	while (h)
+	{
+		n++;
+		if (h->n == NULL)
+			printf("[0] (nil)");
+		printf("%d\n", h->n);
+		h = h->next;
+	}
+	return (n);
 }
