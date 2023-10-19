@@ -19,6 +19,5 @@ size_t list_len(const listint_t *h)
 		n++;
 		h = h->next;
 	}
-
 	return (n);
 }
