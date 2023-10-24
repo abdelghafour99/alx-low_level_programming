@@ -8,7 +8,7 @@
  * Return: the number of nodes
  **/
 
-size_t print_listint(const list_t *h)
+size_t print_listint(const listint_t *h)
 {
 	size_t a = 0;
 
@@ -16,10 +16,7 @@ size_t print_listint(const list_t *h)
 		return (0);
 	while (h)
 	{
-		if (h->str == NULL)
-			printf("[0] (nil)\n");
-		else
-			printf("[%d] %s\n", h->len, h->str);
+		printf("%d\n", h->n);
 		a++;
 		h = h->next;
 	}
