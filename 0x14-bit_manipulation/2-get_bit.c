@@ -15,7 +15,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	int Arr[100];
 	unsigned int i = 0;
 
-	if (index < i)
+	if ((index < i) || (n == 0))
 		return (-1);
 	while (n > 0)
 	{
