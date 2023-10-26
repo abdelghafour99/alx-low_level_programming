@@ -23,8 +23,6 @@ int get_bit(unsigned long int n, unsigned int index)
 		Arr[i] = n % 2;
 		n = n / 2;
 		i++;
-		if (i > 63)
-			return (-1);
 	}
 	if (index > i)
 		return (-1);
