@@ -12,16 +12,19 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int Arr[100];
+	int Arr[64];
 	unsigned int i = 0;
 
 	if ((index < i) || (n == 0))
 		return (-1);
+
 	while (n > 0)
 	{
 		Arr[i] = n % 2;
 		n = n / 2;
 		i++;
+		if (i > 63)
+			return (-1);
 	}
 	if (index > i)
 		return (-1);
