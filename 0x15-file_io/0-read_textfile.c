@@ -7,7 +7,7 @@
  * ________________it to the POSIX standard output
  * @filename: variable pointer
  * @letters: number of letters it should read and print
- * 
+ *
  *
  * Return: Always 0
  */
@@ -16,6 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t fl, a, b;
 	char *car;
+
 	car = malloc(letters);
 
 	if (filename == NULL)
