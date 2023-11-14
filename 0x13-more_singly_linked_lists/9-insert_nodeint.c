@@ -2,24 +2,44 @@
 #include <stdio.h>
 
 /**
- * print_listint - prints all the elements of a list
+ * insert_nodeint_at_index - adds a new node at the beginning of a list
  *
- * @h: list of element
- * Return: the number of nodes
+ * @head: list of element
+ * @n: to be add
+ * @idx: the index where n will be add
+ * Return: listint
  **/
 
-size_t print_listint(const listint_t *h)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	size_t a = 0;
+	listint_t *l = *head;
+	listint_t *m;
+	int Ar[40];
+	int j = 0, i = 0;
 
-	if (h == NULL)
-		return (0);
-	while (h)
+	m = malloc(sizeof(listint_t));
+	if (m == NULL)
+		return (NULL);
+
+	*l = *head;
+	while (idx != 0)
 	{
-		printf("%d\n", h->n);
-		a++;
-		h = h->next;
-	}
+		if (l == NULL)
+			return (NULL);
 
-	return (a);
+		Ar[i] = l->n;
+		l = l->next;
+		idx--;
+		i++;
+	}
+	while (j != i)
+	{
+		m->n = Ar[j];
+		m->next = NULL;
+		j++;
+	}
+	m->n = n;
+	m->next = l;
+
+	return (m);
 }
