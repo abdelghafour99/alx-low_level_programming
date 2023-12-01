@@ -3,25 +3,32 @@
 #include "2-strlen_recursion.c"
 
 /**
- * is_palindrome - program 7
- * returns the length of a string
- * @s: the string
+ * is_palindrom - compares string vs string reverse
+ * @s: string
+ * @i: length
+ *
+ * Return: On success 1.
+ *	   -1 if not is returned
+ */
+int is_palindrom(char *s, int i)
+{
+	if (*s != *(s + i))
+		return (0);
+	else if (*s == 0)
+		return (1);
+	return (is_palindrom(s + 1, i - 2));
+}
+
+/**
+ * is_palindrome -function checks if a String is palindrome
+ *
+ * @s: the string checking
  * Return: 1 or 0
  */
-
 int is_palindrome(char *s)
 {
 	int a;
 
-	a = _strlen_recursion(s);
-
-	if (a < 2)
-		return (0);
-
-	if (s[a - 2] == s[a - 1])
-		return (1);
-
-	s++;
-	s[a - 2] = '\0';
-	return (is_palindrome(s));
+	a = _strlen_recursion(s) - 1;
+	return (is_palindrom(s), a);
 }
