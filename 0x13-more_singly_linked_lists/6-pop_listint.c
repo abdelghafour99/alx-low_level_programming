@@ -10,19 +10,15 @@
 
 int pop_listint(listint_t **head)
 {
-	int a;
-	listint_t *l = *head;
-	listint_t *m;
+	int a = 0;
+	listint_t *lead;
 
-	if (head == NULL)
-		return (0);
-
-	a = l->n;
-	m = l->next;
-	if (m == NULL)
-		*head = NULL;
-	else
-		*head = m;
-
+	if (*head != NULL)
+	{
+		lead = (*head)->next;
+		a = (*head)->a;
+		free(*head);
+		*head = lead;
+	}
 	return (a);
 }
