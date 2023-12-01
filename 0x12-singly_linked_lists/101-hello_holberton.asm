@@ -10,14 +10,16 @@ section .text
 	extern printf
 
 main:
-	push rbp
-
-	mov rdi, fmt
+	mov rax, 1
+	mov rdi, 1
 	mov rsi, msg
-	xor rax, rax  ; Clear RAX register before using it
-	call printf
+	mov rdx, msglen
+	syscall
 
-	pop rbp
+	mov rax, 60
+	mov rdi, 0
+	syscall
 
-	xor rax, rax  ; Clear RAX register before returning
-	ret
+section .rodata
+	msg: db "Hello, Holberton", 10
+	msglen: equ $ - msg
