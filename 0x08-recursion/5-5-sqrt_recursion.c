@@ -10,11 +10,11 @@
 
 int sqrt_ab(int a, int b)
 {
-	if (b * b > a)
+	if (b == 1)
 		return (-1);
 	if (a == b * b)
 		return (b);
-	return (sqrt_ab(a, b + 1));
+	return (sqrt_ab(a, b - 1));
 }
 
 /**
@@ -28,8 +28,8 @@ int _sqrt_recursion(int n)
 {
 	if (n == 1)
 		return (1);
-	else if (n <= 0)
+	if (n <= 0)
 		return (-1);
 
-	return (sqrt_ab(n, 1));
+	return (sqrt_ab(n, n / 2));
 }
