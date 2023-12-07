@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * add_node - adds a new node at the beginning of a dlist
+ * add_dnodeint - adds a new node at the beginning of a dlist
  *
  * @head: list of element
  * @n: theelement to be add
