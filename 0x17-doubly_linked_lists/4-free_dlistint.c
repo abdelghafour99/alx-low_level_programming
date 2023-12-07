@@ -7,7 +7,7 @@
  * @head: dlist of element
  **/
 
-void free_dlistint(list_t *head)
+void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *l;
 
