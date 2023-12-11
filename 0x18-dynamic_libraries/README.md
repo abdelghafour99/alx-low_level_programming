@@ -9,7 +9,10 @@
 
 ######	TASK 0	######
 
-##Comand used:~/OUSSI$gcc -fPIC -c *.c
+##Comand used:~/OUSSI$ gcc -fPIC -c *.c
 ##Comand used:~/OUSSI$ gcc -shared -o libdynamic.so *.o
 
-######	TASK 1	######
+######	TASK 100	######
+after creating functions in a-oprations.c file we execute this comand
+##Comand used:~/OUSSI$ gcc -fPIC -c a-operations.c
+##Comand used:~/OUSSI$ gcc -shared -o 100-operations.so a-operations.o
